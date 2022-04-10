@@ -6,7 +6,8 @@ function Header({title}){
 }
 
 export default function HomePage(){
-    const arrayList = ["HTML","CSS","JavaScript","Node.js","React.js"]
+    const arrayList1 = ["HTML","CSS","JavaScript","Node.js","React","Next.js","Vercel"]
+    const arrayList2 = ["Visual Studio Code","GitHub"]
 
     const [likes, setLikes] = useState(0)
 
@@ -16,10 +17,17 @@ export default function HomePage(){
 
     return (
         <div>
-            <Header title="Desarrollo Web"/>
+            <Header title="Aprende lo Básico de Next.js"/>
+            <h2>Tecnologías y Herramientas para el Desarrollo Web</h2>
             <ul>
-                {arrayList.map((arrayList) => (
-                    <li key={arrayList}>{arrayList}</li>                
+                {arrayList1.map((arrayList1) => (
+                    <li key={arrayList1}>{arrayList1}</li>                
+                ))}
+            </ul>
+            <h2>Editor de Código y Control de Versiones</h2>
+            <ul>
+                {arrayList2.map((arrayList2) => (
+                    <li key={arrayList2}>{arrayList2}</li>                
                 ))}
             </ul>
             <button onClick = {handledClick}>Me gusta ({likes})</button>
